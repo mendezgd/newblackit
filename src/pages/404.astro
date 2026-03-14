@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="404 — Black It">
+  <div style="min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:4rem 2rem;text-align:center;">
+    <p style="font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:.15em;text-transform:uppercase;">Error 404</p>
+    <h1 style="font-family:var(--display);font-size:clamp(3rem,8vw,6rem);font-weight:400;line-height:1;color:var(--text);">Página no<br/>encontrada.</h1>
+    <p style="color:var(--muted);font-weight:300;max-width:380px;">La página que busca no existe o fue movida. Vuelva al inicio para continuar navegando.</p>
+    <a href="/" class="btn btn--solid">Volver al inicio</a>
+  </div>
+</Base>

@@ -1,0 +1,55 @@
+---
+import Base        from '../../layouts/Base.astro';
+import ServicePage from '../../components/ServicePage.astro';
+
+const stats = [
+  { value: '99.9%',  label: 'Uptime garantizado' },
+  { value: '<1 min', label: 'Tiempo de alerta' },
+  { value: '24/7',   label: 'Monitoreo continuo' },
+];
+
+const cards = [
+  {
+    icon:  'chart',
+    title: 'Reporting y KPIs',
+    desc:  'Reportes y métricas completamente customizables para visualizaciones en tiempo real. Dashboards adaptados a cada área del negocio con los indicadores clave que realmente importan.',
+    points: [
+      'Dashboards personalizados por área de negocio',
+      'Métricas históricas y en tiempo real',
+      'Exportación automática de reportes periódicos',
+      'Visualización de tendencias y anomalías',
+    ],
+  },
+  {
+    icon:  'layers',
+    title: 'Discovering',
+    desc:  'Descubrimiento, modelado y visualización de la arquitectura en tiempo real. Detección automática de nuevos componentes y cambios en la infraestructura sin intervención manual.',
+    points: [
+      'Inventario automático de hosts y servicios',
+      'Mapa de dependencias actualizado en tiempo real',
+      'Detección de cambios sin configuración manual',
+      'Soporte para entornos híbridos y cloud',
+    ],
+  },
+  {
+    icon:  'server',
+    title: 'Gestión de activos',
+    desc:  'Inventario completo y actualizado de todos sus activos tecnológicos. Trazabilidad, historial de cambios y alertas automáticas ante incidentes críticos.',
+    points: [
+      'Inventario unificado de hardware y software',
+      'Historial completo de cambios y versiones',
+      'Alertas configurables por criticidad',
+      'Integración con sistemas de ticketing',
+    ],
+  },
+];
+---
+<Base title="Monitoreo — Black It">
+  <ServicePage
+    tag="Monitoreo"
+    title="Visibilidad total de su infraestructura."
+    subtitle="Nuestro pilar es Check_MK, configurable a medida de cada cliente para anticiparse a problemas antes de que afecten al negocio."
+    cards={cards}
+    stats={stats}
+  />
+</Base>

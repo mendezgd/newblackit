@@ -1,0 +1,55 @@
+---
+import Base        from '../../layouts/Base.astro';
+import ServicePage from '../../components/ServicePage.astro';
+
+const stats = [
+  { value: 'IBM',     label: 'Watson certificado' },
+  { value: '80%',     label: 'Reducción de tareas manuales' },
+  { value: 'Escala',  label: 'Desde PoC hasta producción' },
+];
+
+const cards = [
+  {
+    icon:  'chart',
+    title: 'BI & Data Analytics',
+    desc:  'Transforme sus datos en decisiones. Implementamos soluciones de Business Intelligence que convierten información dispersa en inteligencia de negocio accionable y medible.',
+    points: [
+      'Integración con múltiples fuentes de datos',
+      'Dashboards ejecutivos y operativos',
+      'Modelos predictivos y análisis de tendencias',
+      'Data warehouse y pipelines de datos',
+    ],
+  },
+  {
+    icon:  'gear',
+    title: 'Automation Anywhere',
+    desc:  'Concentre su esfuerzo en tareas que agreguen valor real. Automatizamos procesos repetitivos con RPA para liberar a su equipo y reducir errores operativos al mínimo.',
+    points: [
+      'Automatización de procesos administrativos y financieros',
+      'Bots de RPA para tareas repetitivas de alto volumen',
+      'Integración con sistemas legacy sin APIs',
+      'Monitoreo y auditoría de bots en producción',
+    ],
+  },
+  {
+    icon:  'brain',
+    title: 'AI a Escala',
+    desc:  'Ponga la Inteligencia Artificial a trabajar a escala en su empresa con profesionales homologados en IBM Watson para proyectos de IA desde la prueba de concepto hasta producción.',
+    points: [
+      'Modelos de lenguaje y procesamiento de texto',
+      'Clasificación y análisis de documentos',
+      'Asistentes virtuales y chatbots empresariales',
+      'MLOps: despliegue y monitoreo de modelos',
+    ],
+  },
+];
+---
+<Base title="Inteligencia Artificial — Black It">
+  <ServicePage
+    tag="Inteligencia Artificial"
+    title="IA que genera impacto real en su negocio."
+    subtitle="Profesionales de alto nivel, homologados en Watson, para ayudarlo a embarcarse en la transformación inteligente de su empresa."
+    cards={cards}
+    stats={stats}
+  />
+</Base>

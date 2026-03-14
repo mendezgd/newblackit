@@ -1,0 +1,44 @@
+---
+import Base        from '../../layouts/Base.astro';
+import ServicePage from '../../components/ServicePage.astro';
+
+const stats = [
+  { value: 'AWS',    label: 'Partner certificado' },
+  { value: '0',      label: 'Downtime en migración' },
+  { value: 'Multi',  label: 'Cloud y hybrid' },
+];
+
+const cards = [
+  {
+    icon:  'cloud',
+    title: 'AWS',
+    desc:  'Transforme sus operaciones en soluciones ágiles y escalables en Amazon Web Services. Desde el diseño de la arquitectura hasta la administración continua del entorno.',
+    points: [
+      'Diseño de arquitectura cloud-native',
+      'Migración lift-and-shift y re-arquitectura',
+      'Optimización de costos con FinOps',
+      'Administración continua y soporte 24/7',
+    ],
+  },
+  {
+    icon:  'server',
+    title: 'IBM Cloud',
+    desc:  'Trabajamos junto a su equipo para que la adopción de IBM Cloud sea ágil, eficiente y con el menor impacto operativo posible. Desde la planificación hasta el go-live y más allá.',
+    points: [
+      'Planificación y roadmap de adopción cloud',
+      'Migración de workloads críticos con cero downtime',
+      'Configuración de seguridad y compliance',
+      'Capacitación del equipo interno',
+    ],
+  },
+];
+---
+<Base title="Cloud Solutions — Black It">
+  <ServicePage
+    tag="Cloud Solutions"
+    title="Migración y gestión cloud sin fricciones."
+    subtitle="Ayudamos a las compañías a realizar una transición exitosa hacia la nube, con acompañamiento técnico completo en cada etapa del proceso."
+    cards={cards}
+    stats={stats}
+  />
+</Base>

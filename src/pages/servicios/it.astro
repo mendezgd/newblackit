@@ -1,0 +1,66 @@
+---
+import Base        from '../../layouts/Base.astro';
+import ServicePage from '../../components/ServicePage.astro';
+
+const stats = [
+  { value: '4',      label: 'Áreas de especialización' },
+  { value: 'On/Off', label: 'Presencial y remoto' },
+  { value: 'Agile',  label: 'Metodología de trabajo' },
+];
+
+const cards = [
+  {
+    icon:  'layers',
+    title: 'Integración de sistemas',
+    desc:  'Conectamos las tecnologías de su empresa, existentes o futuras. Eliminamos silos de información y creamos flujos de datos eficientes entre sistemas heterogéneos.',
+    points: [
+      'Integración de ERP, CRM y sistemas legacy',
+      'Diseño y desarrollo de APIs REST y SOAP',
+      'Middleware y buses de integración empresarial',
+      'Monitoreo de flujos y gestión de errores',
+    ],
+  },
+  {
+    icon:  'shield',
+    title: 'Servicios administrados',
+    desc:  'Administramos de forma remota o presencial su infraestructura cloud y on-premise. Soporte continuo, monitoreo proactivo y resolución rápida de incidentes.',
+    points: [
+      'NOC 24/7 con SLAs garantizados',
+      'Gestión de parches y actualizaciones',
+      'Backup, disaster recovery y continuidad de negocio',
+      'Gestión de proveedores y licencias',
+    ],
+  },
+  {
+    icon:  'gear',
+    title: 'Gestión de proyectos',
+    desc:  'Explotamos nuestra experiencia para acompañar sus proyectos tecnológicos. Metodologías ágiles, comunicación clara y entregas medibles en cada sprint.',
+    points: [
+      'PMO y gobierno de proyectos IT',
+      'Scrum, Kanban y metodologías híbridas',
+      'Gestión de riesgos y planes de contingencia',
+      'Reporting ejecutivo y dashboards de avance',
+    ],
+  },
+  {
+    icon:  'code',
+    title: 'Desarrollo a medida',
+    desc:  'Aplicaciones adaptadas exactamente a las necesidades de su empresa. Desde el relevamiento funcional hasta el despliegue en producción y el soporte posterior.',
+    points: [
+      'Aplicaciones web y mobile empresariales',
+      'Arquitecturas microservicios y serverless',
+      'Testing automatizado y CI/CD pipelines',
+      'Documentación técnica y transferencia de conocimiento',
+    ],
+  },
+];
+---
+<Base title="Consultoría de TI — Black It">
+  <ServicePage
+    tag="Consultoría de TI"
+    title="Estrategia tecnológica para crecer con solidez."
+    subtitle="Nos especializamos en encontrar la mejor solución para todas las necesidades tecnológicas de su empresa, con foco en resultados medibles y sostenibles."
+    cards={cards}
+    stats={stats}
+  />
+</Base>

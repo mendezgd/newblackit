@@ -1,0 +1,327 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Black It — Consultoría IT',
+  description = 'Especialistas en monitoreo, inteligencia artificial, cloud y consultoría estratégica de TI.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/png" href="/logopox.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+
+      <a href="/" class="nav__logo">
+        <!-- Inline SVG logo: recreates the Black It mark without alpha issues -->
+        <svg class="nav__logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="58" cy="50" r="40" fill="white"/>
+          <rect x="38" y="22" width="7" height="56" fill="#080808"/>
+          <rect x="55" y="22" width="28" height="8" fill="#080808"/>
+          <rect x="64" y="22" width="7" height="56" fill="#080808"/>
+          <text x="21" y="30"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">B</text>
+          <text x="21" y="43"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">L</text>
+          <text x="21" y="56"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">A</text>
+          <text x="21" y="69"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">C</text>
+          <text x="21" y="82"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">K</text>
+        </svg>
+        <span class="nav__logo-name">Black It</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="/#servicios">Servicios</a>
+        <a href="/#tecnologias">Tecnologías</a>
+        <a href="/#proceso">Proceso</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+
+      <a href="/#contacto" class="nav__cta">Iniciar proyecto</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main><slot /></main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="/" class="footer__brand">
+        <svg class="footer__logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="58" cy="50" r="40" fill="white"/>
+          <rect x="38" y="22" width="7" height="56" fill="#080808"/>
+          <rect x="55" y="22" width="28" height="8" fill="#080808"/>
+          <rect x="64" y="22" width="7" height="56" fill="#080808"/>
+          <text x="21" y="30"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">B</text>
+          <text x="21" y="43"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">L</text>
+          <text x="21" y="56"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">A</text>
+          <text x="21" y="69"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">C</text>
+          <text x="21" y="82"  font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">K</text>
+        </svg>
+        <span>Transformando ideas en soluciones tecnológicas</span>
+      </a>
+      <p class="footer__copy">© {new Date().getFullYear()} Black It · Buenos Aires, Argentina</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('navBurger');
+    const links  = document.getElementById('navLinks');
+    burger?.addEventListener('click', () => {
+      links?.classList.toggle('nav__links--open');
+      burger.classList.toggle('nav__burger--open');
+    });
+    links?.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        burger?.classList.remove('nav__burger--open');
+      })
+    );
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav')?.classList.toggle('nav--scrolled', window.scrollY > 30);
+    });
+  </script>
+
+</body>
+</html>
+
+<style is:global>
+:root {
+  --bg:      #080808;
+  --bg2:     #0f0f0f;
+  --bg3:     #141414;
+  --border:  rgba(255,255,255,0.06);
+  --amber:   #f5a623;
+  --amber2:  #e09415;
+  --text:    #ececec;
+  --muted:   #6b6b6b;
+  --mono:    'DM Mono', monospace;
+  --sans:    'DM Sans', sans-serif;
+  --display: 'Bebas Neue', sans-serif;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a   { color: inherit; }
+
+/* ── Utilities ── */
+.divider { height: 1px; background: var(--border); }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--amber);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.section-label::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--amber);
+  opacity: 0.6;
+}
+
+h2.section-title {
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.section-sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn--solid   { background: var(--amber); color: #080808; }
+.btn--solid:hover { background: var(--amber2); transform: translateY(-1px); }
+.btn--outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.15); }
+.btn--outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.03); }
+
+.section { padding: 6rem 2.5rem; }
+.section--alt { background: var(--bg2); }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.fu   { animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) both; }
+.fu-1 { animation-delay: 0.05s; }
+.fu-2 { animation-delay: 0.18s; }
+.fu-3 { animation-delay: 0.32s; }
+.fu-4 { animation-delay: 0.48s; }
+.fu-5 { animation-delay: 0.64s; }
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(22,20,18,0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(245,166,35,0.15);
+  transition: border-color 0.3s, background 0.3s;
+}
+.nav--scrolled {
+  background: rgba(26,24,20,0.98);
+  border-bottom-color: rgba(245,166,35,0.22);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  padding: 0 2.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nav__logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.nav__logo-svg {
+  width: 36px; height: 36px; flex-shrink: 0;
+  opacity: 0.95; transition: opacity 0.2s;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+}
+.nav__logo:hover .nav__logo-svg {
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(245,166,35,0.35);
+}
+.nav__logo-name {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.nav__links { display: flex; gap: 2.2rem; align-items: center; }
+.nav__links a {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--text); }
+
+.nav__cta {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--amber); text-decoration: none;
+  padding: 7px 16px;
+  border: 1px solid rgba(245,166,35,0.35); border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s; white-space: nowrap;
+}
+.nav__cta:hover { background: rgba(245,166,35,0.08); border-color: var(--amber); }
+
+.nav__burger {
+  display: none; flex-direction: column; gap: 5px;
+  width: 30px; height: 30px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+  justify-content: center;
+}
+.nav__burger span {
+  display: block; width: 100%; height: 1px;
+  background: var(--text);
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+.nav__burger--open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav__burger--open span:nth-child(2) { opacity: 0; }
+.nav__burger--open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ── FOOTER ── */
+.footer { border-top: 1px solid var(--border); padding: 2.5rem 2.5rem; }
+.footer__inner {
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  max-width: 1280px; margin: 0 auto;
+}
+.footer__brand {
+  display: flex; align-items: center; gap: 14px; text-decoration: none;
+}
+.footer__logo-svg {
+  width: 26px; height: 26px; flex-shrink: 0;
+  opacity: 0.4; transition: opacity 0.2s;
+}
+.footer__brand:hover .footer__logo-svg { opacity: 0.65; }
+.footer__brand span {
+  font-size: 12px; color: var(--muted); font-weight: 300;
+  border-left: 1px solid var(--border); padding-left: 14px;
+}
+.footer__copy {
+  font-family: var(--mono); font-size: 10px;
+  color: rgba(255,255,255,0.18); letter-spacing: 0.06em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav__inner  { padding: 0 1.5rem; }
+  .nav__cta    { display: none; }
+  .nav__burger { display: flex; }
+  .nav__links {
+    position: fixed; top: 62px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: rgba(26,24,20,0.99);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(245,166,35,0.15);
+    padding: 0.5rem 0;
+    opacity: 0; pointer-events: none; transform: translateY(-8px);
+    transition: opacity 0.25s, transform 0.25s; align-items: stretch;
+  }
+  .nav__links--open { opacity: 1; pointer-events: all; transform: translateY(0); }
+  .nav__links a { padding: 0.9rem 1.5rem; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .nav__links a:last-child { border-bottom: none; }
+  .section { padding: 4rem 1.5rem; }
+  .footer  { padding: 2rem 1.5rem; }
+  .footer__brand span { display: none; }
+}
+</style>
