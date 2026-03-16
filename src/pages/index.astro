@@ -87,10 +87,8 @@ const techs = [
 
         <!-- Monitoreo -->
         <a href="/servicios/monitoreo" class="srv-card">
-          <!-- SVG illustration: monitoring dashboard -->
           <div class="srv-card__art">
             <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Grid lines -->
               <line x1="0" y1="40"  x2="320" y2="40"  stroke="rgba(245,166,35,.08)" stroke-width="1"/>
               <line x1="0" y1="80"  x2="320" y2="80"  stroke="rgba(245,166,35,.08)" stroke-width="1"/>
               <line x1="0" y1="120" x2="320" y2="120" stroke="rgba(245,166,35,.08)" stroke-width="1"/>
@@ -98,21 +96,12 @@ const techs = [
               <line x1="128" y1="0" x2="128" y2="160" stroke="rgba(245,166,35,.08)" stroke-width="1"/>
               <line x1="192" y1="0" x2="192" y2="160" stroke="rgba(245,166,35,.08)" stroke-width="1"/>
               <line x1="256" y1="0" x2="256" y2="160" stroke="rgba(245,166,35,.08)" stroke-width="1"/>
-              <!-- Chart line -->
-              <polyline
-                points="20,130 60,110 90,95 110,105 140,70 170,80 200,45 230,55 260,30 290,20"
-                stroke="#f5a623" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- Area fill -->
-              <polygon
-                points="20,130 60,110 90,95 110,105 140,70 170,80 200,45 230,55 260,30 290,20 290,155 20,155"
-                fill="url(#chartFill)" opacity="0.3"/>
-              <!-- Data points -->
+              <polyline points="20,130 60,110 90,95 110,105 140,70 170,80 200,45 230,55 260,30 290,20" stroke="#f5a623" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="20,130 60,110 90,95 110,105 140,70 170,80 200,45 230,55 260,30 290,20 290,155 20,155" fill="url(#chartFill)" opacity="0.3"/>
               <circle cx="140" cy="70"  r="4" fill="#f5a623"/>
               <circle cx="200" cy="45"  r="4" fill="#f5a623"/>
               <circle cx="260" cy="30"  r="5" fill="#f5a623" opacity="0.9"/>
-              <!-- Alert dot -->
               <circle cx="260" cy="30" r="10" fill="#f5a623" opacity="0.12"/>
-              <!-- Status bars right side -->
               <rect x="280" y="60"  width="6" height="80" rx="3" fill="rgba(245,166,35,.15)"/>
               <rect x="280" y="90"  width="6" height="50" rx="3" fill="#f5a623" opacity="0.6"/>
               <rect x="294" y="60"  width="6" height="80" rx="3" fill="rgba(245,166,35,.15)"/>
@@ -151,39 +140,30 @@ const techs = [
         <a href="/servicios/ai" class="srv-card">
           <div class="srv-card__art">
             <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Neural network nodes -->
-              <!-- Layer 1 (left) -->
               <circle cx="40"  cy="40"  r="8" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1"/>
               <circle cx="40"  cy="80"  r="8" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1"/>
               <circle cx="40"  cy="120" r="8" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1"/>
-              <!-- Layer 2 (center-left) -->
               <circle cx="120" cy="30"  r="9" fill="rgba(245,166,35,.25)" stroke="#f5a623" stroke-width="1.2"/>
               <circle cx="120" cy="65"  r="9" fill="rgba(245,166,35,.35)" stroke="#f5a623" stroke-width="1.5"/>
               <circle cx="120" cy="100" r="9" fill="rgba(245,166,35,.25)" stroke="#f5a623" stroke-width="1.2"/>
               <circle cx="120" cy="135" r="9" fill="rgba(245,166,35,.15)" stroke="#f5a623" stroke-width="1"/>
-              <!-- Layer 3 (center-right) -->
               <circle cx="200" cy="45"  r="9" fill="rgba(245,166,35,.25)" stroke="#f5a623" stroke-width="1.2"/>
               <circle cx="200" cy="80"  r="10" fill="rgba(245,166,35,.5)" stroke="#f5a623" stroke-width="2"/>
               <circle cx="200" cy="115" r="9" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1.2"/>
-              <!-- Layer 4 (right) -->
               <circle cx="280" cy="60"  r="8" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1"/>
               <circle cx="280" cy="100" r="8" fill="rgba(245,166,35,.2)" stroke="#f5a623" stroke-width="1"/>
-              <!-- Connections L1→L2 -->
               <line x1="48" y1="40"  x2="111" y2="30"  stroke="#f5a623" stroke-width=".6" opacity=".25"/>
               <line x1="48" y1="40"  x2="111" y2="65"  stroke="#f5a623" stroke-width="1"  opacity=".5"/>
               <line x1="48" y1="80"  x2="111" y2="65"  stroke="#f5a623" stroke-width="1.2" opacity=".6"/>
               <line x1="48" y1="80"  x2="111" y2="100" stroke="#f5a623" stroke-width=".8"  opacity=".4"/>
               <line x1="48" y1="120" x2="111" y2="100" stroke="#f5a623" stroke-width=".6"  opacity=".3"/>
               <line x1="48" y1="120" x2="111" y2="135" stroke="#f5a623" stroke-width=".5"  opacity=".2"/>
-              <!-- Connections L2→L3 -->
               <line x1="129" y1="65"  x2="191" y2="45"  stroke="#f5a623" stroke-width=".8"  opacity=".4"/>
               <line x1="129" y1="65"  x2="191" y2="80"  stroke="#f5a623" stroke-width="1.5"  opacity=".7"/>
               <line x1="129" y1="100" x2="191" y2="80"  stroke="#f5a623" stroke-width="1.2"  opacity=".6"/>
               <line x1="129" y1="100" x2="191" y2="115" stroke="#f5a623" stroke-width=".7"  opacity=".35"/>
-              <!-- Connections L3→L4 -->
               <line x1="209" y1="80"  x2="272" y2="60"  stroke="#f5a623" stroke-width="1.2" opacity=".6"/>
               <line x1="209" y1="80"  x2="272" y2="100" stroke="#f5a623" stroke-width="1"   opacity=".5"/>
-              <!-- Glow on active node -->
               <circle cx="200" cy="80" r="18" fill="#f5a623" opacity="0.05"/>
             </svg>
           </div>
@@ -214,29 +194,23 @@ const techs = [
         <a href="/servicios/cloud" class="srv-card">
           <div class="srv-card__art">
             <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Cloud shape -->
               <ellipse cx="160" cy="75"  rx="90" ry="38" fill="rgba(245,166,35,.08)" stroke="#f5a623" stroke-width="1.2"/>
               <ellipse cx="120" cy="80"  rx="55" ry="28" fill="rgba(245,166,35,.06)" stroke="#f5a623" stroke-width=".8" opacity=".6"/>
               <ellipse cx="195" cy="82"  rx="48" ry="24" fill="rgba(245,166,35,.06)" stroke="#f5a623" stroke-width=".8" opacity=".5"/>
-              <!-- Server rack on-premise (left) -->
               <rect x="22" y="95"  width="48" height="8"  rx="2" fill="rgba(245,166,35,.15)" stroke="#f5a623" stroke-width=".8"/>
               <rect x="22" y="107" width="48" height="8"  rx="2" fill="rgba(245,166,35,.1)"  stroke="#f5a623" stroke-width=".8"/>
               <rect x="22" y="119" width="48" height="8"  rx="2" fill="rgba(245,166,35,.08)" stroke="#f5a623" stroke-width=".8"/>
               <circle cx="61" cy="99"  r="2" fill="#f5a623" opacity=".7"/>
               <circle cx="61" cy="111" r="2" fill="#f5a623" opacity=".4"/>
               <circle cx="61" cy="123" r="2" fill="rgba(245,166,35,.3)"/>
-              <!-- Cloud node (right) -->
               <rect x="252" y="95"  width="46" height="8"  rx="2" fill="rgba(245,166,35,.15)" stroke="#f5a623" stroke-width=".8"/>
               <rect x="252" y="107" width="46" height="8"  rx="2" fill="rgba(245,166,35,.1)"  stroke="#f5a623" stroke-width=".8"/>
               <circle cx="289" cy="99"  r="2" fill="#f5a623" opacity=".7"/>
               <circle cx="289" cy="111" r="2" fill="#f5a623" opacity=".4"/>
-              <!-- Upload/download arrows -->
               <line x1="160" y1="137" x2="160" y2="115" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
               <polyline points="153,122 160,115 167,122" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <!-- Connection lines -->
               <line x1="70"  y1="95" x2="100" y2="75" stroke="#f5a623" stroke-width=".8" stroke-dasharray="4 3" opacity=".5"/>
               <line x1="252" y1="95" x2="220" y2="75" stroke="#f5a623" stroke-width=".8" stroke-dasharray="4 3" opacity=".5"/>
-              <!-- AWS / IBM labels -->
               <text x="46"  y="88" font-family="monospace" font-size="8" fill="#f5a623" opacity=".5" text-anchor="middle">ON-PREM</text>
               <text x="275" y="88" font-family="monospace" font-size="8" fill="#f5a623" opacity=".5" text-anchor="middle">CLOUD</text>
             </svg>
@@ -266,26 +240,20 @@ const techs = [
         <a href="/servicios/it" class="srv-card">
           <div class="srv-card__art">
             <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- System integration diagram -->
-              <!-- Central hub -->
               <circle cx="160" cy="80" r="22" fill="rgba(245,166,35,.12)" stroke="#f5a623" stroke-width="1.5"/>
               <circle cx="160" cy="80" r="12" fill="rgba(245,166,35,.2)"  stroke="#f5a623" stroke-width="1"/>
-              <!-- Satellite nodes -->
               <rect x="28"  y="30"  width="44" height="28" rx="4" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/>
               <rect x="248" y="30"  width="44" height="28" rx="4" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/>
               <rect x="28"  y="102" width="44" height="28" rx="4" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/>
               <rect x="248" y="102" width="44" height="28" rx="4" fill="rgba(245,166,35,.1)" stroke="#f5a623" stroke-width=".8"/>
-              <!-- Node labels -->
               <text x="50"  y="48"  font-family="monospace" font-size="7" fill="#f5a623" opacity=".6" text-anchor="middle">ERP</text>
               <text x="270" y="48"  font-family="monospace" font-size="7" fill="#f5a623" opacity=".6" text-anchor="middle">CRM</text>
               <text x="50"  y="120" font-family="monospace" font-size="7" fill="#f5a623" opacity=".6" text-anchor="middle">CLOUD</text>
               <text x="270" y="120" font-family="monospace" font-size="7" fill="#f5a623" opacity=".6" text-anchor="middle">API</text>
-              <!-- Connection lines -->
               <line x1="72"  y1="52"  x2="140" y2="72"  stroke="#f5a623" stroke-width="1"   opacity=".45" stroke-dasharray="5 3"/>
               <line x1="248" y1="52"  x2="180" y2="72"  stroke="#f5a623" stroke-width="1"   opacity=".45" stroke-dasharray="5 3"/>
               <line x1="72"  y1="115" x2="140" y2="90"  stroke="#f5a623" stroke-width="1"   opacity=".45" stroke-dasharray="5 3"/>
               <line x1="248" y1="115" x2="180" y2="90"  stroke="#f5a623" stroke-width="1"   opacity=".45" stroke-dasharray="5 3"/>
-              <!-- Pulse rings on hub -->
               <circle cx="160" cy="80" r="32" stroke="#f5a623" stroke-width=".5" opacity=".15"/>
               <circle cx="160" cy="80" r="42" stroke="#f5a623" stroke-width=".4" opacity=".08"/>
             </svg>
@@ -318,7 +286,7 @@ const techs = [
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       TECNOLOGÍAS — fixed even grid
+       TECNOLOGÍAS
   ══════════════════════════════════════ -->
   <section class="section section--alt" id="tecnologias">
     <div class="container">
@@ -374,43 +342,55 @@ const techs = [
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       CONTACTO
+       CONTACTO — sin formulario
   ══════════════════════════════════════ -->
   <section class="section section--alt" id="contacto">
     <div class="container">
-      <div class="contact-grid">
+      <div class="contact-layout">
 
-        <div class="contact-info">
+        <div class="contact-text">
           <p class="section-label">Contacto</p>
           <h2 class="section-title">¿Tiene un<br />proyecto<br />en mente?</h2>
-          <p class="contact-info__desc">
+          <p class="contact-desc">
             No importa en qué etapa se encuentre. Desde una consulta
             inicial hasta un proyecto en curso que necesita refuerzo.
             Hablemos.
           </p>
-          <a class="contact-info__email" href="mailto:info@blackit.com.ar">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 3.5l6 4.5 6-4.5M1 3.5h12v8H1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-            </svg>
-            info@blackit.com.ar
-          </a>
         </div>
 
-        <form class="contact-form" action="mailto:info@blackit.com.ar" method="get" enctype="text/plain">
-          <div class="contact-form__field">
-            <label for="f-name">Nombre</label>
-            <input id="f-name" type="text" name="nombre" placeholder="Su nombre completo" />
+        <div class="contact-channels">
+          <a class="contact-channel" href="mailto:info@blackit.com.ar">
+            <div class="contact-channel__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M1.5 4.5l7.5 5.25 7.5-5.25M1.5 4.5h15v10.5h-15z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-channel__body">
+              <span class="contact-channel__label">Email</span>
+              <span class="contact-channel__value">info@blackit.com.ar</span>
+            </div>
+            <svg class="contact-channel__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <div class="contact-channel contact-channel--location">
+            <div class="contact-channel__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="9" cy="7.5" r="2.5" stroke="currentColor" stroke-width="1.3"/>
+                <path d="M9 1.5C5.96 1.5 3.5 3.96 3.5 7c0 4 5.5 9.5 5.5 9.5S14.5 11 14.5 7c0-3.04-2.46-5.5-5.5-5.5z" stroke="currentColor" stroke-width="1.3"/>
+              </svg>
+            </div>
+            <div class="contact-channel__body">
+              <span class="contact-channel__label">Ubicación</span>
+              <span class="contact-channel__value">Buenos Aires, Argentina</span>
+            </div>
           </div>
-          <div class="contact-form__field">
-            <label for="f-email">Email</label>
-            <input id="f-email" type="email" name="email" placeholder="correo@empresa.com" />
+
+          <div class="contact-note">
+            <p>Respondemos todas las consultas dentro de las <strong>24 horas hábiles</strong>. Para urgencias, indicarlo en el asunto del email.</p>
           </div>
-          <div class="contact-form__field">
-            <label for="f-msg">Mensaje</label>
-            <textarea id="f-msg" name="mensaje" rows="4" placeholder="Cuéntenos sobre su proyecto o consulta..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--solid">Enviar mensaje</button>
-        </form>
+        </div>
 
       </div>
     </div>
@@ -501,44 +481,24 @@ const techs = [
   overflow: hidden;
   margin-top: 3.5rem;
 }
-
 .srv-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--bg);
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
-  transition: background 0.25s;
-  position: relative;
+  display: flex; flex-direction: column;
+  background: var(--bg); text-decoration: none; color: inherit;
+  overflow: hidden; transition: background 0.25s; position: relative;
 }
 .srv-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--amber);
-  transform: scaleX(0); transform-origin: left;
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--amber); transform: scaleX(0); transform-origin: left;
   transition: transform 0.3s ease;
 }
 .srv-card:hover { background: var(--bg2); }
 .srv-card:hover::before { transform: scaleX(1); }
-
-/* SVG illustration area */
 .srv-card__art {
-  width: 100%;
-  background: rgba(245,166,35,.025);
-  border-bottom: 1px solid var(--border);
-  padding: 0;
-  overflow: hidden;
-  flex-shrink: 0;
+  width: 100%; background: rgba(245,166,35,.025);
+  border-bottom: 1px solid var(--border); overflow: hidden; flex-shrink: 0;
 }
-.srv-card__art svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Card text body */
-.srv-card__body { padding: 2rem 2rem 2rem; }
+.srv-card__art svg { display: block; width: 100%; height: auto; }
+.srv-card__body { padding: 2rem; }
 .srv-card__head {
   display: flex; justify-content: space-between;
   align-items: flex-start; margin-bottom: 1.25rem;
@@ -550,16 +510,13 @@ const techs = [
 .srv-card__icon {
   width: 36px; height: 36px;
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(245,166,35,.2);
-  border-radius: 5px; background: rgba(245,166,35,.04);
-  color: var(--amber);
+  border: 1px solid rgba(245,166,35,.2); border-radius: 5px;
+  background: rgba(245,166,35,.04); color: var(--amber);
 }
 .srv-card__icon svg { width: 18px; height: 18px; }
-
 .srv-card__body h3 {
-  font-family: var(--display);
-  font-size: 1.65rem; font-weight: 400; letter-spacing: 0.03em;
-  color: var(--text); margin-bottom: 0.65rem;
+  font-family: var(--display); font-size: 1.65rem; font-weight: 400;
+  letter-spacing: 0.03em; color: var(--text); margin-bottom: 0.65rem;
   transition: color 0.2s;
 }
 .srv-card:hover h3 { color: var(--amber); }
@@ -583,95 +540,128 @@ const techs = [
 }
 .srv-card:hover .srv-card__more { opacity: 1; transform: translateX(0); }
 
-/* ── TECH GRID — fixed 4 cols, even ── */
+/* ── TECH GRID ── */
 .tech-grid {
-  display: grid;
-  /* 4 equal columns — text truncates cleanly, no wrapping issues */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  overflow: hidden;
-  margin-top: 3rem;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: 3px; overflow: hidden; margin-top: 3rem;
 }
 .tech-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 1.1rem 1.4rem;
-  background: var(--bg2);
-  transition: background 0.2s;
-  min-width: 0; /* allow text to shrink */
+  padding: 1.1rem 1.4rem; background: var(--bg2); transition: background 0.2s; min-width: 0;
 }
 .tech-item:hover { background: var(--bg3); }
 .tech-item__dot {
-  display: block; width: 5px; height: 5px;
-  background: var(--amber); border-radius: 50%;
-  flex-shrink: 0; opacity: 0.65;
-  transition: opacity 0.2s;
+  display: block; width: 5px; height: 5px; background: var(--amber);
+  border-radius: 50%; flex-shrink: 0; opacity: 0.65; transition: opacity 0.2s;
 }
 .tech-item:hover .tech-item__dot { opacity: 1; }
 .tech-item__name {
   font-family: var(--mono); font-size: 12px; color: var(--text);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  transition: color 0.2s;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color 0.2s;
 }
 .tech-item:hover .tech-item__name { color: rgba(245,166,35,.85); }
 
 /* ── PROCESS ── */
 .process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 4rem;
-  border-left: 1px solid var(--border);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin-top: 4rem; border-left: 1px solid var(--border);
 }
 .process-step { padding: 0 2rem; border-right: 1px solid var(--border); transition: background 0.2s; }
 .process-step:hover { background: rgba(245,166,35,.02); }
 .process-step__num {
-  display: block; font-family: var(--display);
-  font-size: 3.5rem; color: rgba(245,166,35,.12);
-  line-height: 1; margin-bottom: 1rem;
+  display: block; font-family: var(--display); font-size: 3.5rem;
+  color: rgba(245,166,35,.12); line-height: 1; margin-bottom: 1rem;
 }
 .process-step__title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 0.6rem; }
 .process-step__desc  { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
 
-/* ── CONTACT ── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start; }
-.contact-info__desc { font-size: 15px; color: var(--muted); line-height: 1.75; font-weight: 300; margin: 1.5rem 0 2.5rem; max-width: 360px; }
-.contact-info__email {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--mono); font-size: 12px; color: var(--amber);
-  text-decoration: none; padding: 10px 16px;
-  border: 1px solid rgba(245,166,35,.2); border-radius: 2px;
-  transition: background 0.2s, border-color 0.2s;
+/* ── CONTACTO ── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
 }
-.contact-info__email:hover { background: rgba(245,166,35,.05); border-color: rgba(245,166,35,.4); }
 
-.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-.contact-form__field { display: flex; flex-direction: column; gap: 6px; }
-.contact-form__field label { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
-.contact-form__field input,
-.contact-form__field textarea {
-  background: rgba(255,255,255,.03);
-  border: 1px solid var(--border); color: var(--text);
-  font-family: var(--sans); font-size: 14px;
-  padding: 11px 14px; border-radius: 2px; outline: none; resize: vertical;
-  transition: border-color 0.2s, background 0.2s;
+.contact-desc {
+  font-size: 15px; color: var(--muted);
+  line-height: 1.75; font-weight: 300;
+  margin: 1.5rem 0 0; max-width: 360px;
 }
-.contact-form__field input:focus,
-.contact-form__field textarea:focus { border-color: rgba(245,166,35,.35); background: rgba(245,166,35,.02); }
-.contact-form__field input::placeholder,
-.contact-form__field textarea::placeholder { color: rgba(255,255,255,.15); }
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.contact-channel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--bg);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+  border-bottom: 1px solid var(--border);
+}
+.contact-channel:last-of-type { border-bottom: none; }
+.contact-channel--location { cursor: default; }
+.contact-channel[href]:hover { background: var(--bg3); }
+
+.contact-channel__icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(245,166,35,.05);
+  border: 1px solid rgba(245,166,35,.14);
+  border-radius: 6px; color: var(--amber);
+}
+
+.contact-channel__body {
+  display: flex; flex-direction: column; gap: 3px; flex: 1;
+}
+.contact-channel__label {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.contact-channel__value {
+  font-size: 14px; color: var(--text); font-weight: 400;
+}
+.contact-channel[href] .contact-channel__value { color: var(--amber); }
+
+.contact-channel__arrow {
+  color: var(--muted); flex-shrink: 0;
+  transition: transform 0.2s, color 0.2s;
+}
+.contact-channel[href]:hover .contact-channel__arrow {
+  transform: translateX(3px);
+  color: var(--amber);
+}
+
+.contact-note {
+  padding: 1.25rem 1.5rem;
+  background: rgba(245,166,35,.03);
+  border-top: 1px solid var(--border);
+}
+.contact-note p {
+  font-size: 12px; color: var(--muted); line-height: 1.65; font-weight: 300;
+}
+.contact-note strong { color: var(--text); font-weight: 500; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .tech-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
 @media (max-width: 900px) {
   .process-grid { grid-template-columns: repeat(2, 1fr); border-left: none; }
   .process-step { padding: 1.75rem; border-left: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 }
-
 @media (max-width: 768px) {
   .hero { padding: 7rem 1.5rem 4rem; }
   .hero__title { font-size: clamp(3.5rem, 14vw, 5rem); }
@@ -680,9 +670,8 @@ const techs = [
   .hero__metric { border-right: none; padding-right: 0; margin-right: 0; }
   .srv-grid { grid-template-columns: 1fr; }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
 }
-
 @media (max-width: 480px) {
   .process-grid { grid-template-columns: 1fr; }
 }
